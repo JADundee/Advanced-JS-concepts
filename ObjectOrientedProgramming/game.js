@@ -94,6 +94,10 @@ class Elf extends Race {
         super(name, weapon)
         this.type = type
     }
+    //polymorphism
+    attack(magic) {
+        return 'attack with ' + magic
+    }
 }
 
 class Gnome extends Race {
@@ -103,6 +107,10 @@ class Gnome extends Race {
     }
     Build() {
         return 'Best tinkerer in Azeroth'
+    }
+    //polymorphism
+    attack() {
+        return "attack with blunt object"
     }
 }
 
