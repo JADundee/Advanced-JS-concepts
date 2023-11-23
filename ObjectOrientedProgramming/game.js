@@ -46,7 +46,7 @@ Elf.prototype.attack = function() {
     return this.name + ' attacks with ' + this.weapon
 }
 
-const Legoless = new elf('Legoless', 'Bow')
+const Legoless = new Elf('Legoless', 'Bow')
 Legoless.attack()
 
 // new Function 
@@ -55,3 +55,19 @@ Legoless.attack()
 const Elf1 = new Function('name', 'weapon', `this.name = name
 this.weapon = weapon`)
 const Legoless = new Elf1('Legoless', 'Bow')
+
+
+// ES6 classes refactor
+
+class Elf {
+    constructor(name, weapon) {
+        this.name = name
+        this.weapon = weapon
+    }
+    attack() {
+        this.name + ' attacks with ' + this.weapon
+    }
+}
+
+const Legoless = new Elf('Legoless', 'Bow')
+Legoless.attack()
