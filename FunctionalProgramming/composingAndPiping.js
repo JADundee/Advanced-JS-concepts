@@ -16,3 +16,5 @@ const pipe = (f, g) => (data) => g(f(data))
 fn1(fn2(fn3(50)))
 compose(fn1, fn2, fn3)(50)
 pipe(fn3, fn2, fn1)(50)
+
+//arity is the number of arguments a function takes
