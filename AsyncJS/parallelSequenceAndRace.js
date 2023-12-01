@@ -1,3 +1,8 @@
+//Parallel, run them all at the same time
+//Sequential, 
+// race, run them all and only return the first one 
+
+
 const promisify = (item, delay) =>
   new Promise((resolve) =>
     setTimeout(() =>
